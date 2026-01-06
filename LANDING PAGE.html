@@ -197,23 +197,12 @@
     </style>
   </head>
   <body>
-<!-- FESTIVE OFFER WITH PRICE TAG AND STRIKETHROUGH -->
-<section style="background:#1e1b4b; text-align:center; padding:40px 0; position:relative;">
+<!-- FESTIVE OFFER WITH PRICE TAG (RESPONSIVE) -->
+<section style="background:#1e1b4b; text-align:center; padding:60px 20px; position:relative;">
   <div class="container" style="position:relative; display:inline-block;">
     
     <!-- Price Tag -->
-    <div style="
-      position:absolute;
-      top:-20px;
-      right:-20px;
-      background:#facc15;
-      color:#0b1020;
-      padding:10px 20px;
-      font-weight:700;
-      font-size:1.3rem;
-      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    ">
+    <div class="price-tag">
       ₦5,000
     </div>
     
@@ -227,7 +216,33 @@
       Offer ends on <strong>10th January</strong>. Secure your spot today.
     </p>
   </div>
+
+  <style>
+    .price-tag {
+      position:absolute;
+      top:-25px;
+      right:-25px;
+      background:#facc15;
+      color:#0b1020;
+      padding:15px 25px;
+      font-weight:700;
+      font-size:1.3rem;
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Mobile Fix */
+    @media(max-width:768px){
+      .price-tag {
+        position: static;
+        display: inline-block;
+        margin-bottom:20px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+  </style>
 </section>
+
 
 
     <!-- HERO -->
@@ -410,6 +425,7 @@
     </section>
   </body>
 </html>
+
 
 
 
