@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Development Training</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", system-ui;
+      }
+
+      body {
+        background: #0b1020;
+        color: #e5e7eb;
+        line-height: 1.7;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 14px;
+        display: block;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      section {
+        padding: 90px 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #f8fafc;
+      }
+
+      p,
+      li {
+        color: #9ca3af;
+      }
+
+      /* HERO */
+      .hero {
+        text-align: center;
+        padding: 130px 0;
+        background: radial-gradient(circle at top, #1e1b4b, #020617);
+        animation: fadeIn 1.2s ease;
+      }
+
+      .hero h1 {
+        font-size: 3.2rem;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        max-width: 720px;
+        margin: auto;
+        font-size: 1.15rem;
+      }
+
+      /* BUTTON + HEARTBEAT */
+      .btn {
+        display: inline-block;
+        margin-top: 35px;
+        padding: 16px 40px;
+        background: #6366f1;
+        color: #fff;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: 0.3s;
+        animation: heartbeat 2.2s infinite;
+      }
+
+      .btn:hover {
+        background: #4f46e5;
+        transform: translateY(-3px);
+      }
+
+      @keyframes heartbeat {
+        0% {
+          transform: scale(1);
+        }
+        14% {
+          transform: scale(1.08);
+        }
+        28% {
+          transform: scale(1);
+        }
+        42% {
+          transform: scale(1.06);
+        }
+        70% {
+          transform: scale(1);
+        }
+      }
+
+      /* SECTION HEAD */
+      .section-head {
+        text-align: center;
+        max-width: 720px;
+        margin: auto;
+        margin-bottom: 60px;
+      }
+
+      /* GRID */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        background: #020617;
+        border: 1px solid #1e293b;
+        padding: 35px;
+        border-radius: 16px;
+        transition: 0.4s;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        border-color: #6366f1;
+      }
+
+      .card i {
+        font-size: 1.9rem;
+        color: #818cf8;
+        margin-bottom: 15px;
+      }
+
+      /* SPLIT */
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 55px;
+        align-items: center;
+      }
+
+      .highlight {
+        background: #020617;
+        border-left: 4px solid #6366f1;
+        padding: 30px;
+        border-radius: 12px;
+        margin-top: 30px;
+      }
+
+      /* FINAL */
+      .final {
+        text-align: center;
+        background: #020617;
+        border-top: 1px solid #1e293b;
+        padding: 120px 20px;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.3rem;
+        }
+        .split {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- FESTIVE OFFER WITH PRICE TAG -->
+    <section
+      style="
+        background: #1e1b4b;
+        text-align: center;
+        padding: 40px 0;
+        position: relative;
+      "
+    >
+      <div class="container" style="position: relative; display: inline-block">
+        <!-- Price Tag -->
+        <div
+          style="
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: #facc15;
+            color: #0b1020;
+            padding: 15px 25px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          "
+        >
+          ₦5,000
+        </div>
+
+        <h3
+          style="
+            color: #facc15;
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+          "
+        >
+          Festive Season Offer
+        </h3>
+        <p
+          style="
+            color: #e5e7eb;
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: auto;
+          "
+        >
+          Our full web development course, normally priced at
+          <strong>₦25,000</strong>, is now available for
+          <strong>₦5,000</strong> for a limited time. Offer ends on
+          <strong>10th January</strong>. Secure your spot today.
+        </p>
+      </div>
+    </section>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <h1>Learn Web Development With Structure and Discipline</h1>
+        <p>
+          Frontend and backend training built around real practice, measurable
+          exams, and a serious learning system.
+        </p>
+        <a href="https://wa.link/omyd9c" class="btn">Register to Start</a>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>A Real Coding Community</h2>
+          <p>Powered by the Digerati Coding Community.</p>
+        </div>
+
+        <div class="split">
+          <div>
+            <h3>You Learn With People Who Are Serious</h3>
+            <p>
+              This training runs inside a real community where students learn
+              together, submit work, and stay accountable.
+            </p>
+            <a
+              href="https://www.facebook.com/profile.php?id=61573299730649"
+              class="btn"
+              >View Community on Facebook</a
+            >
+          </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
+            alt="coding community"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- DEVICE -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Learn With Phone or Laptop</h2>
+          <p>Your current device will not stop your growth.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <h3>Android Learning</h3>
+            <p>
+              Learn using Android apps built for coding and backend practice.
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3>Laptop Support</h3>
+            <p>Full support for deeper development and deployment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACKEND -->
+    <section>
+      <div class="container">
+        <div class="split">
+          <img
+            src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1000&q=80"
+            alt="backend development"
+          />
+
+          <div>
+            <h2>
+              Guess what!! our community teaches backend programming using
+              mobiles phones
+            </h2>
+            <p></p>
+
+            <div class="highlight">
+              when it comes to backend development many tutoring platforms tell
+              students to get a laptop then continue but our community made it
+              possible for our students to learn django framework just with
+              their phones with a special app that can run frameworks
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMS -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Exams and Accountability</h2>
+          <p>
+            All assessments happen on the Digerati Anti-Malpractice Website.
+          </p>
+        </div>
+
+        <div class="split">
+          <div>
+            <h3>Weekly Exams With Discipline</h3>
+            <p>Learning is tracked and measured directly on our platform.</p>
+
+            <ul>
+              <li>Dummy practice exams every Wednesday</li>
+              <li>Main graded exam once a week on Fridays</li>
+              <li>Anti-malpractice system</li>
+              <li>Scores update automatically on your dashboard</li>
+              <li>Best performing students recognized weekly</li>
+            </ul>
+          </div>
+
+          <!-- FIXED EXAM IMAGE -->
+          <img
+            src="https://codequotient.com/blog/wp-content/uploads/2023/03/How-to-Ace-Your-Online-Coding-Test-Tips-and-Tricks-from-Experts.jpg"
+            alt="online examination system"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Weekly Resources and Daily Tasks</h2>
+          <p>You always know what to learn and what to submit.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <i class="fa-solid fa-video"></i>
+            <h3>Weekly Videos</h3>
+            <p>Curated learning videos for each week.</p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-list-check"></i>
+            <h3>Daily Exercises</h3>
+            <p>Clear tasks to practice and submit daily.</p>
+          </div>
+
+          <div class="card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Progress Tracking</h3>
+            <p>Your learning journey is visible and measurable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATFORM PREVIEW -->
+    <section>
+      <div class="container" style="text-align: center">
+        <h2>Preview the Learning Platform</h2>
+        <p>
+          You can view a public version of the platform. Full access unlocks
+          after registration.
+        </p>
+        <a href="https://tinyurl.com/Digerat-Exam" class="btn"
+          >Preview Platform</a
+        >
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final">
+      <h2>Stop Guessing. Start Building.</h2>
+      <p>Join a system where effort is tracked and growth is real.</p>
+      <a href="https://wa.link/omyd9c" class="btn">Register Now</a>
+    </section>
+  </body>
+</html>
