@@ -197,59 +197,37 @@
     </style>
   </head>
   <body>
-    <!-- FESTIVE OFFER WITH PRICE TAG -->
-    <section
-      style="
-        background: #1e1b4b;
-        text-align: center;
-        padding: 40px 0;
-        position: relative;
-      "
-    >
-      <div class="container" style="position: relative; display: inline-block">
-        <!-- Price Tag -->
-        <div
-          style="
-            position: absolute;
-            top: -20px;
-            right: -20px;
-            background: #facc15;
-            color: #0b1020;
-            padding: 10px 20px;
-            font-weight: 700;
-            font-size: 1.3rem;
-            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          "
-        >
-          ₦5,000
-        </div>
-
-        <h3
-          style="
-            color: #facc15;
-            font-size: 1.6rem;
-            margin-bottom: 12px;
-            font-weight: 700;
-          "
-        >
-          Festive Season Offer
-        </h3>
-        <p
-          style="
-            color: #e5e7eb;
-            font-size: 1.15rem;
-            max-width: 700px;
-            margin: auto;
-          "
-        >
-          Our full web development course, normally priced at
-          <strong>₦25,000</strong>, is now available for
-          <strong>₦5,000</strong> for a limited time. Offer ends on
-          <strong>10th January</strong>. Secure your spot today.
-        </p>
-      </div>
-    </section>
+  <!-- FESTIVE OFFER WITH PRICE TAG AND STRIKETHROUGH -->
+<section style="background:#1e1b4b; text-align:center; padding:40px 0; position:relative;">
+  <div class="container" style="position:relative; display:inline-block;">
+    
+    <!-- Price Tag -->
+    <div style="
+      position:absolute;
+      top:-20px;
+      right:-20px;
+      background:#facc15;
+      color:#0b1020;
+      padding:15px 25px;
+      font-weight:700;
+      font-size:1.3rem;
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    ">
+      ₦5,000
+    </div>
+    
+    <h3 style="color:#facc15; font-size:1.6rem; margin-bottom:12px; font-weight:700;">
+      Festive Season Offer
+    </h3>
+    <p style="color:#e5e7eb; font-size:1.15rem; max-width:700px; margin:auto;">
+      Our full web development course, normally priced at 
+      <span style="text-decoration:line-through; color:#f87171; font-weight:600;">₦25,000</span>, 
+      is now available for <strong>₦5,000</strong> for a limited time.  
+      Offer ends on <strong>10th January</strong>. Secure your spot today.
+    </p>
+  </div>
+</section>
 
     <!-- HERO -->
     <section class="hero">
@@ -431,4 +409,5 @@
     </section>
   </body>
 </html>
+
 
